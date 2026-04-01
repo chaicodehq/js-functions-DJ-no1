@@ -3,7 +3,7 @@
  *
  * IPL ka stats dashboard bana raha hai tu! Har function ARROW FUNCTION
  * hona chahiye (const fn = () => ...). Regular function declarations
- * mat use karna — arrow functions ki practice karna hai!
+ * mat use karna — arrow functions ki practice karna hai!```
  *
  * Functions (sab arrow functions honge):
  *
@@ -39,10 +39,16 @@
  */
 export const calcStrikeRate = (runs, balls) => {
   // Your code here
+  if (balls<= 0 || runs<0 ) return 0
+
+  let Strike = Number.parseFloat((( runs/balls)*100).toFixed(2))
+  return Strike
 };
 
 export const calcEconomy = (runsConceded, overs) => {
   // Your code here
+  if (overs <= 0 || runsConceded < 0) return 0
+  
 };
 
 export const calcBattingAvg = (totalRuns, innings, notOuts = 0) => {
